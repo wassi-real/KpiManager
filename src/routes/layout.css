@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html,
+body {
+	font-family: var(--font-sans);
+	background-color: #ffffff;
+	color: #09090b;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	outline: none;
+	border-color: #18181b;
+	box-shadow: 0 0 0 2px rgba(24, 24, 27, 0.1);
+}
