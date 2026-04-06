@@ -96,9 +96,11 @@
 							</label>
 							<input
 								id="fullName"
+								name="fullName"
 								type="text"
 								bind:value={fullName}
-								required
+								required={activeTab === 'signup'}
+								autocomplete="name"
 								class="w-full rounded-lg border border-zinc-200 px-3 py-2.5 text-sm font-medium text-zinc-900 placeholder:text-zinc-300 focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900"
 								placeholder="Jane Smith"
 							/>
@@ -111,9 +113,11 @@
 						</label>
 						<input
 							id="email"
+							name="email"
 							type="email"
 							bind:value={email}
 							required
+							autocomplete="email"
 							class="w-full rounded-lg border border-zinc-200 px-3 py-2.5 text-sm font-medium text-zinc-900 placeholder:text-zinc-300 focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900"
 							placeholder="you@company.com"
 						/>
@@ -125,10 +129,12 @@
 						</label>
 						<input
 							id="password"
+							name="password"
 							type="password"
 							bind:value={password}
 							required
 							minlength={6}
+							autocomplete={activeTab === 'login' ? 'current-password' : 'new-password'}
 							class="w-full rounded-lg border border-zinc-200 px-3 py-2.5 text-sm font-medium text-zinc-900 placeholder:text-zinc-300 focus:border-zinc-900 focus:ring-1 focus:ring-zinc-900"
 							placeholder="••••••••"
 						/>
